@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import {Grid, Row, Col, Input, Button} from 'react-bootstrap';
 import actions from './actions';
+import EmailAddressesList from './EmailAddressesList';
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {arrayLengthValue: ''};
     this.handleArrayLengthValueChange = this.handleArrayLengthValueChange.bind(this);
+    this.handleGenerateClick = this.handleGenerateClick.bind(this);
   }
   handleGenerateClick() {
-    actions.generateArray();
+    actions.generateArray(this.state.arrayLengthValue);
   }
   handleFilterClick() {
     actions.filter();
@@ -38,6 +40,7 @@ export default class App extends Component {
             />
           </Col>
           <Col xs={6}>
+            <EmailAddressesList />
             <h1>Hello, world.</h1>
           </Col>
         </Row>

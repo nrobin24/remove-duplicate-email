@@ -1,4 +1,8 @@
 import React from 'react';
 import App from './App';
+import tree from './tree';
+import {root} from 'baobab-react/higher-order';
 
-React.render(<App />, document.getElementById('root'));
+var ComposedComponent = root(App, tree);
+
+React.render(<ComposedComponent />, document.getElementById('root'));

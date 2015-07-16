@@ -11,6 +11,9 @@ export default class App extends Component {
   handleGenerateClick() {
     actions.generateArray();
   }
+  handleFilterClick() {
+    actions.filter();
+  }
   handleArrayLengthValueChange() {
     let val = this.refs.arrayLengthInput.getValue();
     if (!isNaN(parseInt(val))) {
@@ -36,6 +39,11 @@ export default class App extends Component {
           </Col>
           <Col xs={6}>
             <h1>Hello, world.</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={6}>
+            <Button onClick={this.handleFilterClick}>Filter</Button>
           </Col>
         </Row>
       </Grid>

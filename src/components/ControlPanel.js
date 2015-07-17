@@ -55,7 +55,7 @@ class ControlPanel extends Component {
       <Panel>
         <Input
           type='text'
-          label='length of address list to generate'
+          label='Number of email addresses to generate'
           placeholder='enter a number greater than 1'
           value={this.state.arrayLengthValue}
           onChange={this.handleArrayLengthValueChange}

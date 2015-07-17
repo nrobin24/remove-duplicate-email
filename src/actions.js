@@ -32,5 +32,8 @@ export default {
   clearData() {
     emailAddressesCursor.set([]);
     resultsCursor.set([]);
+  },
+  downloadCsv() {
+    toCsv();
   }
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Badge, Button, Table} from 'react-bootstrap';
 import {branch} from 'baobab-react/higher-order';
+import actions from '../actions';
 
 const divStyle = {
         maxHeight: 60,
@@ -24,18 +25,21 @@ class PreviewList extends Component {
     if (length >= previewLimit) {
       return (
         <p className={"text-muted"}>
-          <i className={"fa fa-exclamation-triangle"}></i> Only the first {previewLimit} items are displayed in the preview list.
+          <i className={"fa fa-exclamation-triangle"}></i> Only the first {previewLimit} items are displayed in this preview. Download the CSV to see the full list.
         </p>
       );
     } else {
       return null;
     }
   }
+  handleDownloadClick() {
+    actions.downloadCsv();
+  }
   render() {
     if (this.props.emailAddresses.length > 0) {
       return (
         <div>
-          <Button bsStyle={'primary'} block style={{marginBottom: 20}}>Download list as CSV</Button>
+          <Button bsStyle={'primary'} block style={{marginBottom: 20}} onClick={this.handleDownloadClick}>Download list as CSV</Button>
           {this.renderMaxWarning(this.props.emailAddresses.length)}
           <Table striped condensed bordered>
             <thead>

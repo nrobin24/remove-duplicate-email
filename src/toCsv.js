@@ -29,7 +29,6 @@ export default function(){
       // it needs to implement server side export
       alert('Sorry, CSV download not supported in this browser');
     }
-    link.innerHTML = 'Export to CSV';
     document.body.appendChild(link);
     link.click();
 	}

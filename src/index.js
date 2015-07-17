@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import App from './components/App';
 import tree from './tree';
 import {root} from 'baobab-react/higher-order';
 

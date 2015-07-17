@@ -1,7 +1,8 @@
 import Baobab from 'baobab';
 
 export default new Baobab({
-  emailAddresses: []
+  emailAddresses: [],
+  results: []
 },
 {
   syncwrite: true

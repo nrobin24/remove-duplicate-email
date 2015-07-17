@@ -27,14 +27,14 @@ export default class ControlPanel extends Component {
           <strong> GENERATE LIST</strong> button.
         </p>
         <p>
-          The generated list of random email addresses will contain 50% duplicates.
+          The generated list of random email addresses will at first contain 50% duplicates.
         </p>
         <p>
-          Hit the <strong> REMOVE DUPLICATES</strong> button to filter, and note how long
+          Hit the <strong> REMOVE DUPLICATES</strong> button to filter out the duplicates, and note how long
           it takes in relation to the size of the list.
         </p>
         <p>
-          You can see how this is implemented in the source code <a target="_blank" href='https://github.com/nrobin24/remove-duplicate-email/blob/master/src/removeDuplicates.js'>by clicking here</a>
+          You can see how this is implemented in the source code <a target='_blank' href='https://github.com/nrobin24/remove-duplicate-email/blob/master/src/removeDuplicates.js'>by clicking here</a>
         </p>
       </Alert>
     );

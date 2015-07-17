@@ -18,13 +18,11 @@ export default class Navigation extends Component {
       <Navbar
         staticTop
         brand={brand}
+        toggleNavKey={0}
       >
-        <Nav>
-
-        </Nav>
-        <Nav pullRight>
-          <NavItem eventKey={1} href='#'>Command Line Version</NavItem>
-          <NavItem eventKey={2} href='#'><i className={"fa fa-github fa-lg"}></i> Repo</NavItem>
+        <Nav pullRight eventKey={0}>
+          <NavItem target='_blank' href='https://gist.github.com/nrobin24/3b57382eed450ca5bb42'>Command Line Version</NavItem>
+          <NavItem target='_blank' href='https://github.com/nrobin24/remove-duplicate-email'><i className={"fa fa-github fa-lg"}></i> Repo</NavItem>
         </Nav>
       </Navbar>
     );

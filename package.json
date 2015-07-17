@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "Demo app to generate a list of random email addresses, then remove duplicates",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "lint": "eslint src"
+  },
+  "engines": {
+    "node": "0.10.x"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "webpack-dev-server": "^1.8.2"
   },
   "dependencies": {
-    "react": "^0.13.0"
+    "react": "^0.13.0",
+    "express": "^4.0.0"
   }
 }
